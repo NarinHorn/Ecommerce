@@ -3,13 +3,33 @@
   <div class="form login shadow">
     <div class="form-content">
       <header>Signup</header>
-      <form action="">
+      <form
+        #sellerSignUp="ngForm"
+        (ngSubmit)="signUp(sellerSignUp.value)"
+        class="common-form"
+      >
+      <div class="field input-field">
+        <input
+          ngModel
+          type="text"
+          placeholder="Name"
+          class="name"
+          name="name"
+        />
+      </div>
         <div class="field input-field">
-          <input type="email" placeholder="Email" class="input" name="email" />
+          <input
+            ngModel
+            type="email"
+            placeholder="Email"
+            class="input"
+            name="email"
+          />
         </div>
 
         <div class="field input-field">
           <input
+            ngModel
             type="password"
             placeholder="Password"
             class="password"
@@ -17,17 +37,8 @@
           />
         </div>
 
-        <div class="field input-field">
-          <input
-            type="password"
-            placeholder="Confirm-Password"
-            class="password"
-            name="confim_pass"
-          />
-        </div>
-
         <div class="field button-field">
-          <button>Signup</button>
+          <button class="form-button">Signup</button>
         </div>
       </form>
 

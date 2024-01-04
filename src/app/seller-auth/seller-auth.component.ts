@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './seller-auth.component.css'
 })
 export class SellerAuthComponent {
-
+  signUp(data:object):void {
+    alert(data);
+    console.log(data);
+  }
 }
